@@ -8,8 +8,8 @@ $("#bookClick").click(() => {
         eventLabel: 'Fall Campaign'
       });
 
-    ga('test.send', 'test.ecommerce:addItem', {
-        'id': '12asd2234',
+    ga('test.ecommerce:addItem', {
+        'id': '122212234',
         'name': 'Test Test',
         'sku': 'DD2344224',
         'category': 'Party Tosys',
