@@ -1,6 +1,13 @@
 $("#bookClick").click(() => {
     console.log("Clicked")
 
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Videos',
+        eventAction: 'play',
+        eventLabel: 'Fall Campaign'
+      });
+
     ga('test.ecommerce:addItem', {
         'id': '12asd2234',
         'name': 'Test Test',
