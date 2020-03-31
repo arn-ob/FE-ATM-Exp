@@ -7,14 +7,34 @@ $("#bookClick").click(() => {
     //     tax: '2.14',
     //     shipping: '4.00',
     // });
-    ga('ec:addProduct', {
-        'id': 'P12345',
-        'name': 'Android Warhol T-Shirt',
-        'category': 'Apparel',
-        'brand': 'Google',
-        'variant': 'black',
-        'position': 1
+
+    let productObj = {
+        name: 'asdasd',
+        id: 'asdasdsa232131312',
+        price: '221',
+        brand: '222',
+        cat: 'food',
+        variant: 'na',
+        position: 'blank',
+        url: 'www.google.com'
+    }
+
+
+    dataLayer.push({
+        'event': 'productClick',
+        'ecommerce': {
+          'click': {
+            'actionField': {'list': 'Search Results'},      // Optional list property.
+            'products': [{
+              'name': productObj.name,                      // Name or ID is required.
+              'id': productObj.id,
+              'price': productObj.price,
+              'brand': productObj.brand,
+              'category': productObj.cat,
+              'variant': productObj.variant,
+              'position': productObj.position
+             }]
+           }
+         }
       });
-      ga('ec:setAction', 'click', {list: 'Search Results'});
-    ga('send', 'pageview');
 })
