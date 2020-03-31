@@ -10,8 +10,6 @@ $("#bookClick").click(() => {
         'quantity': '1',
         'currency': 'USD' // local currency code.
     });
-    ga('test.ecommerce:send');
-
     ga('test.ecommerce:addTransaction', {
         'id': '33345',                     // Transaction ID. Required.
         'affiliation': 'Acmes Clothing',   // Affiliation or store name.
