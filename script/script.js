@@ -1,29 +1,15 @@
 $("#bookClick").click(() => {
     console.log("Clicked")
 
-    ga('test.send', {
-        hitType: 'event',
-        eventCategory: 'Videos',
-        eventAction: 'play',
-        eventLabel: 'Fall Campaign'
+    ga('ec:addProduct', {               // Provide product details in an productFieldObject.
+        'id': 'P12345',                   // Product ID (string).
+        'name': 'Android Warhol T-Shirt', // Product name (string).
+        'category': 'Apparel',            // Product category (string).
+        'brand': 'Google',                // Product brand (string).
+        'variant': 'black',               // Product variant (string).
+        'price': '29.20',                 // Product price (number).
+        'coupon': 'APPARELSALE',          // Product coupon (string).
+        'quantity': 1                     // Product quantity (number).
       });
-
-    ga('test.ecommerce:addItem', {
-        'id': '122212234',
-        'name': 'Test Test',
-        'sku': 'DD2344224',
-        'category': 'Party Tosys',
-        'price': '22',
-        'quantity': '1',
-        'currency': 'USD' // local currency code.
-    });
-    ga('test.ecommerce:addTransaction', {
-        'id': '33345',                     // Transaction ID. Required.
-        'affiliation': 'Acmes Clothing',   // Affiliation or store name.
-        'revenue': '11.99',               // Grand Total.
-        'shipping': '5',                  // Shipping.
-        'tax': '1.29'                     // Tax.
-    });
-    ga('test.ecommerce:send');
     ga('send', 'pageview');
 })
