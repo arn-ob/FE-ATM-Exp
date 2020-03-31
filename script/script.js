@@ -6,9 +6,9 @@ $("#bookClick").click(() => {
         'name': 'Test Test',
         'sku': 'DD2344224',
         'category': 'Party Tosys',
-        'price': '223',
+        'price': '22',
         'quantity': '1',
-        'currency': 'BDT' // local currency code.
+        'currency': 'USD' // local currency code.
     });
     ga('test.ecommerce:send');
 
