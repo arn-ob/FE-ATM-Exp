@@ -1,40 +1,26 @@
 $("#bookClick").click(() => {
-    // console.log("Clicked")
-    // ga('ec:setAction', 'purchase', {
-    //     id: 'asddsad232323',
-    //     affiliation: 'Google Store - Online',
-    //     revenue: '28.03',
-    //     tax: '2.14',
-    //     shipping: '4.00',
+    console.log("Clicked")
+    ga('send', 'ec:setAction', 'purchase', {
+      id: 'T12345',
+      affiliation: 'Google Store - Online',
+      revenue: '28.03',
+      tax: '2.14',
+      shipping: '4.00',
+      coupon: 'SUMMER2013'
+  });
+
+    // ga('send', 'ec:addProduct', {               // Provide product details in a productFieldObject.
+    //   'id': 'P123453',                   // Product ID (string).
+    //   'name': 'Android Warhol T-Shirts', // Product name (string).
+    //   'category': 'Apparel',            // Product category (string).
+    //   'brand': 'Google',                // Product brand (string).
+    //   'variant': 'Black',               // Product variant (string).
+    //   'position': 1,                    // Product position (number).
+    //   'dimension1': 'Member'            // Custom dimension (string).
+    // });
+    
+    // ga('ec:setAction', 'click', {       // click action.
+    //   'list': 'Search Results'          // Product list (string).
     // });
 
-    let productObj = {
-        name: 'asdasd',
-        id: 'asdasdsa232131312',
-        price: '221',
-        brand: '222',
-        cat: 'food',
-        variant: 'na',
-        position: 'blank',
-        url: 'www.google.com'
-    }
-
-
-    dataLayer.push({
-        'event': 'productClick',
-        'ecommerce': {
-          'click': {
-            'actionField': {'list': 'Search Results'},      // Optional list property.
-            'products': [{
-              'name': productObj.name,                      // Name or ID is required.
-              'id': productObj.id,
-              'price': productObj.price,
-              'brand': productObj.brand,
-              'category': productObj.cat,
-              'variant': productObj.variant,
-              'position': productObj.position
-             }]
-           }
-         }
-      });
 })
