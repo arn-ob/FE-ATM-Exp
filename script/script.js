@@ -1,7 +1,7 @@
 $("#bookClick").click(() => {
     console.log("Clicked")
 
-    ga('ecommerce:addItem', {
+    ga('test.ecommerce:addItem', {
         'id': '12asd2234',
         'name': 'Test Test',
         'sku': 'DD2344224',
