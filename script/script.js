@@ -1,15 +1,12 @@
 $("#bookClick").click(() => {
     console.log("Clicked")
-
-    ga('ec:addProduct', {               // Provide product details in an productFieldObject.
-        'id': 'P12345',                   // Product ID (string).
-        'name': 'Android Warhol T-Shirt', // Product name (string).
-        'category': 'Apparel',            // Product category (string).
-        'brand': 'Google',                // Product brand (string).
-        'variant': 'black',               // Product variant (string).
-        'price': '29.20',                 // Product price (number).
-        'coupon': 'APPARELSALE',          // Product coupon (string).
-        'quantity': 1                     // Product quantity (number).
-      });
+    ga('ec:setAction', 'purchase', {
+        id: 'T12345',
+        affiliation: 'Google Store - Online',
+        revenue: '28.03',
+        tax: '2.14',
+        shipping: '4.00',
+        coupon: 'SUMMER2013'
+    });
     ga('send', 'pageview');
 })
