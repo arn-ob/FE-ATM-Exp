@@ -1,14 +1,14 @@
 $("#bookClick").click(() => {
     console.log("Clicked")
 
-    ga('send', {
+    ga('test.send', {
         hitType: 'event',
         eventCategory: 'Videos',
         eventAction: 'play',
         eventLabel: 'Fall Campaign'
       });
 
-    ga('send', 'test.ecommerce:addItem', {
+    ga('test.send', 'test.ecommerce:addItem', {
         'id': '12asd2234',
         'name': 'Test Test',
         'sku': 'DD2344224',
@@ -25,4 +25,5 @@ $("#bookClick").click(() => {
         'tax': '1.29'                     // Tax.
     });
     ga('test.ecommerce:send');
+    ga('send', 'pageview');
 })
